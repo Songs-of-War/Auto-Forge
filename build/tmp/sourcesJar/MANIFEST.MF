@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Main-Class: net.minecraftforge.installer.SimpleInstaller
+
+Name: net/minecraftforge/installer/
+Implementation-Title: SimpleInstaller
+Implementation-Version: 2.0.15
+Specification-Vendor: Forge Development LLC
+Specification-Title: Installer
+Specification-Version: 2.0
+Implementation-Vendor: Forge Development LLC
+
