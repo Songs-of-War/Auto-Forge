@@ -156,7 +156,12 @@ public class InstallerPanel extends JPanel {
 
     public InstallerPanel(File targetDir, Install profile)
     {
+
+        JOptionPane.showMessageDialog(null, "This utility cannot be ran as normal installer", "Error", JOptionPane.WARNING_MESSAGE);
+        System.exit(1);
+
         this.profile = profile;
+
 
         if (this.profile.getSpec() != 0) {
             JOptionPane.showMessageDialog(null, "Invalid launcher profile spec: " + profile.getSpec() + " Only 0 is supported, Whoever package this installer messed up.", "Error", JOptionPane.ERROR_MESSAGE);

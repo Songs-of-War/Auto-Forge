@@ -91,7 +91,7 @@ public class SimpleInstaller
         if (optionSet.has(offlineOption))
         {
             DownloadUtils.OFFLINE_MODE = true;
-            monitor.message("ENABELING OFFLINE MODE");
+            monitor.message("ENABLING OFFLINE MODE");
             cnt = 1;
         }
         else
@@ -102,14 +102,14 @@ public class SimpleInstaller
         Actions action = null;
         File target = null;
         if (optionSet.has(serverInstallOption)) {
-            action = Actions.SERVER;
-            target = optionSet.valueOf(serverInstallOption);
+            monitor.message("Server install not available on this utility");
+            System.exit(1);
         } else if (optionSet.has(clientInstallOption)) {
             action = Actions.CLIENT;
             target = optionSet.valueOf(clientInstallOption);
         } else if (optionSet.has(extractOption)) {
-            action = Actions.EXTRACT;
-            target = optionSet.valueOf(extractOption);
+            monitor.message("Extract is not available on this utility");
+            System.exit(1);
         }
 
         if (action != null)
